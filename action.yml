@@ -1,0 +1,15 @@
+name: Changelog
+author: Chroma Software, Inc.
+
+inputs:
+  token:
+    description: 'Your github token'
+    required: false
+
+outputs:
+  url:
+    description: 'An alias for the build URL (e.g. https://www.chromatic.com/build?appId=<app id goes here>&number=<build number>)'
+
+runs:
+  main: index.js
+  using: node12
