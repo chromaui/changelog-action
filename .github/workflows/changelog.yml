@@ -11,5 +11,6 @@ jobs:
     # if: ${{ github.event.pull_request.merged == true}}
     steps: 
       - uses: actions/checkout@v1
+      - run: yarn
       - uses: ./
    
