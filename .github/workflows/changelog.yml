@@ -14,4 +14,4 @@ jobs:
       - run: yarn
       - uses: ./
         with:
-          data: ${{ github.event }}
+          data: ${{ toJSON(github.event) }}
