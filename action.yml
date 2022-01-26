@@ -1,6 +1,10 @@
 name: Changelog
 author: Chroma Software, Inc.
 
+inputs:
+  data:
+    description: 'data'
+    required: false
 
 outputs:
   debug:
