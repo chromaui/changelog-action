@@ -16,6 +16,7 @@ async function main() {
     // const path = getInput('path', { required: true });
 
     console.log(JSON.stringify(process.env));
+    console.log(getInput('data'));
     // setOutput('debug', JSON.stringify(process.env));
 
     // const path = getInput('path', { required: true });
