@@ -14,7 +14,7 @@ jobs:
       - run: yarn
       - uses: ./
         with:
-          pullRequest: ${{ toJSON(github.event.pull_request) }}
+          pull_request: ${{ toJSON(github.event.pull_request) }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update CHANGELOG.md [skip ci]
