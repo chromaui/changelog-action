@@ -7,11 +7,10 @@ const writeFileAsync = promisify(writeFile);
 
 main().catch((error) => setFailed(error.message));
 
-const CHANGELOG_PATH = './CHANGELOG.md';
-
 async function main() {
+  const CHANGELOG_PATH = './CHANGELOG.md';
   try {
-    const pullRequest = getInput('pullRequest');
+    const pullRequest = getInput('pull_request');
     console.log(pullRequest);
 
     const logLine = `**${pullRequest.merged_at}:** [${pullRequest.title}](${pullRequest.html_url})`;
