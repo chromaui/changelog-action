@@ -8,10 +8,18 @@ on:
 jobs:
   get-and-write-changelog:
     runs-on: ubuntu-latest
-    # if: ${{ github.event.pull_request.merged == true}}
+    if: ${{ github.event.pull_request.merged == true}}
     steps: 
       - uses: actions/checkout@v1
       - run: yarn
       - uses: ./
         with:
-          data: ${{ toJSON(github.event) }}
+          pullRequest: ${{ toJSON(github.event.pull_request) }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update CHANGELOG.md [skip ci]
+          file_pattern: CHANGELOG.md
+          commit_user_name: Changelog Bot
+
+
+
