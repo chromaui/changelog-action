@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "build": "ncc build index.mjs"
+  },
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/io": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
   }
 }
