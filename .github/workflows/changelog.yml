@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.pull_request.merged == true}}
     steps: 
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           token: ${{ secrets.TOKEN }}
       - run: yarn
