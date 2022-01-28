@@ -3,7 +3,7 @@ author: Chroma Software, Inc.
 
 inputs:
   pull_request:
-    description: 'The Pull Request, use `${{ toJSON(github.event.pull_request) }}`'
+    description: 'The Pull Request, use `toJSON(github.event.pull_request)`'
     required: true
 
 runs:
