@@ -1,3 +1,5 @@
+**2022-01-28 06:09:48 UTC:** [Update README.md with limited instructions](https://github.com/chromaui/changelog-action/pull/23)
+
 **2022-01-28 05:59:51 UTC:** [No need to yarn any more](https://github.com/tmeasday/test-changelog/pull/22)
 
 **2022-01-28 05:59:18 UTC:** [Actually use the formatted version](https://github.com/tmeasday/test-changelog/pull/21)
