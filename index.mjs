@@ -12,12 +12,13 @@ async function main() {
   try {
     const { merged_at, title, html_url } = JSON.parse(getInput('pull_request'));
 
+    // Can probably use date formatting to do this, but this works fine
+    const mergedAtFormatted = merged_at.replace('T', ' ').replace('Z', ' UTC');
     const logLine = `**${merged_at}:** [${title}](${html_url})`;
-    console.log(logLine);
 
     const contents = await readFileAsync(CHANGELOG_PATH);
 
-    await writeFileAsync(CHANGELOG_PATH, `${logLine}\n${contents}`);
+    await writeFileAsync(CHANGELOG_PATH, `${logLine}\n\n${contents}`);
     console.log('done');
   } catch (error) {
     setFailed(error.message);
