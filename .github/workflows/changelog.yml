@@ -17,9 +17,11 @@ jobs:
           pull_request: ${{ toJSON(github.event.pull_request) }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          branch: main
           commit_message: Update CHANGELOG.md [skip ci]
           file_pattern: CHANGELOG.md
           commit_user_name: Changelog Bot
+
 
 
 
