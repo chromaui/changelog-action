@@ -1,14 +1,10 @@
-name: Changelog
+name: Changelog from merged PR
 author: Chroma Software, Inc.
 
 inputs:
-  data:
-    description: 'data'
-    required: false
-
-outputs:
-  debug:
-    description: 'Stuff'
+  pull_request:
+    description: 'The Pull Request, use `${{ toJSON(github.event.pull_request) }}`'
+    required: true
 
 runs:
   main: index.mjs
