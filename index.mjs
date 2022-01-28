@@ -14,7 +14,7 @@ async function main() {
 
     // Can probably use date formatting to do this, but this works fine
     const mergedAtFormatted = merged_at.replace('T', ' ').replace('Z', ' UTC');
-    const logLine = `**${merged_at}:** [${title}](${html_url})`;
+    const logLine = `**${mergedAtFormatted}:** [${title}](${html_url})`;
 
     const contents = await readFileAsync(CHANGELOG_PATH);
 
