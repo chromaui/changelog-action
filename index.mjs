@@ -11,7 +11,11 @@ async function main() {
   const CHANGELOG_PATH = './CHANGELOG.md';
   try {
     const pullRequest = getInput('pull_request');
+    console.log('------------');
     console.log(pullRequest);
+    console.log(pullRequest.merged_at);
+    console.log(typeof pullRequest);
+    console.log(Object.keys(pullRequest));
 
     const logLine = `**${pullRequest.merged_at}:** [${pullRequest.title}](${pullRequest.html_url})`;
     console.log(logLine);
